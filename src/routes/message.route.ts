@@ -9,7 +9,7 @@ class MessageRoute extends BaseRouter {
   }
 
   routes(): void {
-    this.router.get('/api/messages', async (req: Request, res: Response) => {
+    this.router.post('/messages', async (req: Request, res: Response) => {
         try {
             const message = new Message(req.body);
             await message.save();

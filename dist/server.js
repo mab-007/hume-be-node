@@ -31,7 +31,7 @@ const messageSchema = new mongoose_1.default.Schema({
 });
 const Message = mongoose_1.default.model('Message', messageSchema);
 // Connect to MongoDB
-mongoose_1.default.connect(process.env.MONGODB_URI || 'your_mongodb_uri')
+mongoose_1.default.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:dG7UPyfjurPaRUxB@ragim.l0t1l.mongodb.net/journaldb?retryWrites=true&w=majority&appName=ragim')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
 // API endpoint to save message

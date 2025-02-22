@@ -32,7 +32,7 @@ app.post('/example', (req: Request, res: Response) => {
 
 // Mount the routers
 app.use('/', pingRoute.router); // Mount the PingRouter at the root
-app.use('/', messageRoute.router); // Mount the PingRouter at the root
+app.use('/api', messageRoute.router); // Mount the PingRouter at the root
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
